@@ -1,0 +1,14 @@
+<div class="container mt-5" *ngIf="isDataFetched && meals.length > 0">
+  <h3 class="text-center">Searched Results</h3>
+  <a routerLink="/" class="btn btn-lg btn-warning">Go back</a>
+  <div class="row mt-4">
+    <div class="col-md-3 card-body" *ngFor="let meal of meals">
+      <a routerLink="/search/{{ meal.strMeal }}" class="text-dark">
+        <img src="{{ meal.strMealThumb }}" alt="" />
+        <h4>{{ meal.strMeal }}</h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+<h3 *ngIf="meals.length < 1" class="mt-5 text-center">oops!! nothing found</h3>

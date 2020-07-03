@@ -1,0 +1,33 @@
+<div class="App">
+  <div class="search">
+    <h3 class="text-center mt-2">Recipedia</h3>
+
+    <div class="col-md-4 mt-3">
+      <form (submit)="commin()">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for a recipe..."
+            name="search"
+            [(ngModel)]="searchText"
+          />
+        </div>
+        <btn
+          routerLink="/recipe/{{ searchText }}"
+          class="btn btn-lg btn-warning text-center"
+          type="submit"
+        >
+          Search
+        </btn>
+        <span class="mx-4 text-white">OR</span>
+        <a
+          routerLink="/random-recipe"
+          class="btn btn-lg btn-warning text-center"
+        >
+          Get Random Recipe
+        </a>
+      </form>
+    </div>
+  </div>
+</div>

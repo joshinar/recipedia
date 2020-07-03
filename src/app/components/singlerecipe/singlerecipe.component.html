@@ -1,0 +1,150 @@
+<div class="content text-white" *ngIf="ready">
+  <div class="container">
+    <h3 class="text-center mb-4">{{ meal.strMeal }}</h3>
+    <button class="btn btn-lg btn-warning" (click)="backClicked()">
+      Go back
+    </button>
+    <h4 class="text-center my-2" *ngIf="meal">Ingredients:</h4>
+    <div class="row mt-5">
+      <div class="col-md-4" *ngIf="meal">
+        <h5 class="my-2" *ngIf="meal">Category : {{ meal.strCategory }}</h5>
+        <h5 class="my-2" *ngIf="meal">Country : {{ meal.strArea }}</h5>
+        <img src="{{ meal.strMealThumb }}" alt="" class="img-fluid img-round" />
+      </div>
+      <div class="col-md-8">
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient1
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient2
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient3
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient4
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient5
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient6
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient7
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient8
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient9
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient10
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient11
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient12
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient13
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient14
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient15
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient16
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient17
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+        <img
+          src="https://www.themealdb.com/images/ingredients/{{
+            meal.strIngredient18
+          }}.png"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-md-12 mt-3">
+        <p class="lead">{{ meal.strInstructions }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="loading mt-5" *ngIf="!ready">
+  <h4 class="text-center mt-5">Loading your recipe ...</h4>
+</div>

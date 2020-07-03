@@ -1,0 +1,33 @@
+/* body {
+  overflow: hidden;
+} */
+.App {
+  position: relative;
+  background: #111;
+  height: 100vh;
+}
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("https://cdn.pixabay.com/photo/2017/06/01/18/27/cook-2364182_1280.jpg")
+    center center/cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+h3 {
+  font-size: 5rem;
+  z-index: 10;
+  color: yellowgreen;
+  font-weight: bolder;
+  letter-spacing: 10px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
